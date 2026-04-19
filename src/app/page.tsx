@@ -2,95 +2,135 @@ import React from 'react';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#050505] text-[#e5e2e1] font-inter">
-      {/* Dynamic Header */}
-      <nav className="fixed w-full z-50 bg-[#050505]/90 backdrop-blur-md border-b border-[#3b4b37]/30">
+    <main className="min-h-screen bg-[#0d0e15] text-[#eeedf7] font-['Manrope'] selection:bg-[#00F5FF] selection:text-black">
+      {/* Top Nav */}
+      <nav className="fixed w-full z-50 bg-[#0d0e15]/80 backdrop-blur-xl border-b border-[#474750]/30">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="font-space-grotesk text-2xl font-bold tracking-widest text-[#00FF41] uppercase">ai_PROT</div>
-          <div className="hidden md:flex gap-8 font-space-grotesk text-sm uppercase tracking-widest text-[#84967e]">
-            <a href="#features" className="hover:text-[#00FF41] transition-colors">Features</a>
-            <a href="#pricing" className="hover:text-[#00FF41] transition-colors">Pricing</a>
-            <a href="#docs" className="hover:text-[#00FF41] transition-colors">Docs</a>
+          <div className="text-xl font-bold tracking-tighter text-[#00F5FF] font-['Space_Grotesk']">SONIC_SINGULARITY</div>
+          <div className="hidden md:flex gap-8 text-sm uppercase tracking-widest text-[#abaab4] font-['Space_Grotesk']">
+            <a href="#studio" className="hover:text-[#00F5FF] transition-colors">Studio</a>
+            <a href="#features" className="hover:text-[#00F5FF] transition-colors">Tech</a>
+            <a href="#pricing" className="hover:text-[#00F5FF] transition-colors">Tiers</a>
           </div>
-          <button className="px-6 py-2 border border-[#00FF41] text-[#00FF41] font-mono text-sm hover:bg-[#00FF41] hover:text-[#050505] shadow-[0_0_10px_rgba(0,255,65,0.2)] transition-all">
-            INITIATE
+          <button className="px-6 py-2 rounded-full bg-gradient-to-br from-[#00F5FF] to-[#00e5ee] text-[#004346] text-sm uppercase font-bold tracking-widest hover:shadow-[0_0_15px_rgba(0,245,255,0.4)] transition-all">
+            Access Terminal
           </button>
         </div>
       </nav>
 
       {/* Hero */}
-      <section className="pt-40 pb-32 px-6 flex flex-col items-center justify-center text-center min-h-[80vh] relative overflow-hidden">
-         <div className="absolute top-0 right-1/4 w-[400px] h-[400px] bg-[#00FF41] rounded-full mix-blend-screen filter blur-[150px] opacity-10 pointer-events-none"></div>
-         <div className="inline-block px-3 py-1 bg-[#131313] border border-[#3b4b37] text-[#84967e] font-mono text-xs mb-8">SYSTEM_STATUS: SECURE</div>
-         <h1 className="text-5xl md:text-7xl font-space-grotesk font-bold tracking-tighter mb-6 uppercase leading-tight">
-           THE ULTIMATE <br/><span className="text-[#00FF41] underline decoration-[#FF003C] underline-offset-8 decoration-4">ai voice studio</span>
-         </h1>
-         <p className="text-lg text-[#84967e] max-w-2xl mb-12">
-           Build an AI voice cloning interface. Feature animated audio waveforms, voice profile cards, and a text-to-speech input terminal.
-         </p>
-         <button className="px-12 py-4 bg-[#00FF41] text-[#003907] font-space-grotesk font-bold uppercase tracking-widest hover:shadow-[0_0_30px_rgba(0,255,65,0.6)] transition-all">
-           LAUNCH TERMINAL
-         </button>
+      <section className="pt-40 pb-20 px-6 relative overflow-hidden flex flex-col items-center justify-center text-center min-h-[90vh]">
+        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-[#FF00FF] rounded-full mix-blend-screen filter blur-[200px] opacity-10 pointer-events-none"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] bg-[#00F5FF] rounded-full mix-blend-screen filter blur-[150px] opacity-10 pointer-events-none"></div>
+        
+        <h1 className="text-6xl md:text-8xl font-bold tracking-tighter mb-8 leading-none font-['Space_Grotesk'] uppercase">
+          SYNTHESIZE <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00F5FF] to-[#FF00FF]">THE UNREAL.</span>
+        </h1>
+        <p className="text-xl text-[#abaab4] mb-12 max-w-2xl mx-auto font-light">
+          Hyper-realistic AI voice cloning interface. Capture human emotion, synthesize audio waveforms in real-time, and deploy globally.
+        </p>
+        <button className="px-12 py-5 rounded-full bg-gradient-to-br from-[#00F5FF] to-[#00e5ee] text-[#004346] font-bold uppercase tracking-widest text-lg hover:shadow-[0_0_30px_rgba(0,245,255,0.5)] transition-all font-['Space_Grotesk']">
+          GET STARTED
+        </button>
       </section>
 
-      {/* Features */}
-      <section id="features" className="py-32 bg-[#0e0e0e] px-6 relative">
-        <div className="absolute inset-0 bg-[linear-gradient(#3b4b37_1px,transparent_1px),linear-gradient(90deg,#3b4b37_1px,transparent_1px)] bg-[size:40px_40px] opacity-[0.03]"></div>
-        <div className="max-w-7xl mx-auto relative z-10">
-          <h2 className="text-3xl font-space-grotesk font-bold uppercase tracking-widest mb-16 text-[#00FF41] border-b border-[#3b4b37]/30 pb-4">Core Architecture</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="bg-[#131313] p-8 border border-[#3b4b37]/30 hover:border-[#00FF41]/50 group transition-all">
-                <div className="text-3xl font-mono text-[#FF003C] mb-6 group-hover:text-[#00FF41] transition-colors">0{i}</div>
-                <h3 className="text-xl font-space-grotesk uppercase tracking-widest mb-4">Module {i}</h3>
-                <p className="text-[#84967e] text-sm">High-performance components designed for extreme data density and rapid execution. No bloated code. Just pure function.</p>
-              </div>
-            ))}
-          </div>
+      {/* Voice Cloning Studio Demo */}
+      <section id="studio" className="py-20 px-6 max-w-7xl mx-auto relative z-10">
+        <div className="bg-[#12131b] border border-[#474750]/30 rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] flex flex-col md:flex-row">
+           {/* Sidebar: Profiles */}
+           <div className="w-full md:w-80 bg-[#000000] p-6 border-r border-[#474750]/30">
+             <h3 className="text-sm font-['Space_Grotesk'] uppercase tracking-widest text-[#abaab4] mb-6">Voice Profiles</h3>
+             <div className="space-y-4">
+               {['CYBER SYNTH', 'NEON ECHO', 'VOID DRIFTER'].map((voice, i) => (
+                 <div key={i} className="bg-[#12131b] border border-[#474750]/30 p-4 rounded-xl hover:border-[#00F5FF]/50 transition-all cursor-pointer relative group">
+                   <div className="absolute top-4 right-4 w-2 h-2 rounded-full bg-[#00F5FF] shadow-[0_0_5px_#00F5FF] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                   <div className="font-['Space_Grotesk'] text-[#eeedf7] mb-1">{voice}</div>
+                   <div className="text-xs text-[#abaab4]">English (US) • Synthetic</div>
+                 </div>
+               ))}
+             </div>
+           </div>
+           {/* Main Studio Area */}
+           <div className="flex-1 p-8 flex flex-col">
+             <div className="flex-1 bg-[#181922] border border-[#474750]/30 rounded-xl mb-6 p-6 relative overflow-hidden flex items-center justify-center">
+               <div className="absolute top-4 left-4 text-xs font-['Space_Grotesk'] uppercase tracking-widest text-[#00F5FF]">Live Waveform Output</div>
+               {/* Simulated Animated Waveform */}
+               <div className="flex items-center gap-1 h-32 w-full max-w-lg">
+                 {[...Array(40)].map((_, i) => (
+                   <div key={i} className="flex-1 bg-gradient-to-t from-[#00F5FF] to-[#FF00FF] rounded-full" style={{height: `${Math.random() * 80 + 20}%`, opacity: Math.random() * 0.5 + 0.5}}></div>
+                 ))}
+               </div>
+             </div>
+             <div className="relative">
+               <textarea className="w-full h-32 bg-[#181922] border border-[#474750]/30 rounded-xl p-4 text-sm font-['Space_Grotesk'] outline-none focus:border-[#00F5FF]/50 text-[#eeedf7] resize-none" placeholder="Enter text to synthesize..."></textarea>
+               <button className="absolute bottom-4 right-4 px-6 py-2 rounded-full bg-[#FF00FF] text-white text-xs font-bold uppercase tracking-widest font-['Space_Grotesk'] hover:shadow-[0_0_15px_rgba(255,0,255,0.4)] transition-all">GENERATE</button>
+             </div>
+           </div>
+        </div>
+      </section>
+
+      {/* Features Grid */}
+      <section id="features" className="py-32 px-6 max-w-7xl mx-auto">
+        <h2 className="text-4xl font-bold uppercase tracking-widest text-center mb-16 font-['Space_Grotesk']">Core Capabilities</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {[
+            {t: "Instant Cloning", d: "Generate a hyper-realistic voice profile from just 3 seconds of audio input."},
+            {t: "Emotion Synthesis", d: "Adjust tone, pitch, and emotional resonance using our proprietary slider matrix."},
+            {t: "Global Reach", d: "Output in over 40 languages with native accents and dialect preservation."}
+          ].map((f, i) => (
+            <div key={i} className="bg-[#12131b] border border-[#474750]/30 p-8 rounded-2xl hover:bg-[#181922] transition-colors">
+              <div className="w-12 h-12 rounded-full bg-[#00F5FF]/10 flex items-center justify-center text-[#00F5FF] font-['Space_Grotesk'] font-bold mb-6 border border-[#00F5FF]/30">0{i+1}</div>
+              <h3 className="text-xl font-bold uppercase tracking-widest text-[#eeedf7] mb-4 font-['Space_Grotesk']">{f.t}</h3>
+              <p className="text-[#abaab4] text-sm leading-relaxed">{f.d}</p>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="py-32 px-6">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="p-10 border border-[#3b4b37]/50 bg-[#0e0e0e] flex flex-col">
-            <h3 className="text-2xl font-space-grotesk uppercase tracking-widest mb-2 text-[#84967e]">Base Node</h3>
-            <div className="text-4xl font-mono mb-8 text-[#e5e2e1]">./process_batch2_landing.sh / mo</div>
-            <ul className="space-y-4 font-mono text-sm text-[#84967e] mb-10 flex-1">
-              <li>+ Standard API Limits</li>
-              <li>+ Community Support</li>
-              <li>+ 99.9% Uptime</li>
-            </ul>
-            <button className="w-full py-3 border border-[#84967e] text-[#84967e] font-mono text-sm uppercase hover:bg-[#84967e] hover:text-[#050505] transition-colors">Deploy Base</button>
-          </div>
-          <div className="p-10 border border-[#00FF41] bg-[#131313] shadow-[0_0_30px_rgba(0,255,65,0.05)] flex flex-col relative overflow-hidden">
-            <div className="absolute top-0 right-0 bg-[#00FF41] text-[#003907] text-xs font-mono px-3 py-1 font-bold">RECOMMENDED</div>
-            <h3 className="text-2xl font-space-grotesk uppercase tracking-widest mb-2 text-[#00FF41]">Quantum Node</h3>
-            <div className="text-4xl font-mono mb-8 text-[#e5e2e1]">9 / mo</div>
-            <ul className="space-y-4 font-mono text-sm text-[#e5e2e1] mb-10 flex-1">
-              <li className="text-[#00FF41]">+ Unlimited API Calls</li>
-              <li>+ Dedicated SLA</li>
-              <li>+ Custom Integrations</li>
-              <li>+ Enterprise Security</li>
-            </ul>
-            <button className="w-full py-3 bg-[#00FF41] text-[#003907] font-mono font-bold text-sm uppercase hover:bg-white transition-colors">Deploy Quantum</button>
+      <section id="pricing" className="py-32 px-6 bg-[#000000]">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold uppercase tracking-widest text-center mb-16 font-['Space_Grotesk']">Access Levels</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-end">
+             <div className="bg-[#12131b] border border-[#474750]/30 p-8 rounded-3xl">
+               <h3 className="text-xl uppercase tracking-widest text-[#abaab4] mb-2 font-['Space_Grotesk']">Free</h3>
+               <div className="text-4xl font-bold text-[#eeedf7] mb-8 font-['Space_Grotesk']">./process_batch2_true_stitch.sh</div>
+               <button className="w-full py-3 rounded-full border border-[#abaab4] text-[#abaab4] uppercase font-bold text-sm tracking-widest mb-8 hover:bg-[#abaab4] hover:text-black transition-colors">Select</button>
+               <ul className="space-y-4 text-sm text-[#abaab4]">
+                 <li>10 mins synthesis / mo</li>
+                 <li>3 Default Voices</li>
+               </ul>
+             </div>
+             
+             <div className="bg-[#181922] border-2 border-[#00F5FF] p-10 rounded-3xl shadow-[0_0_30px_rgba(0,245,255,0.1)] relative md:-translate-y-4">
+               <div className="absolute top-0 right-8 bg-[#00F5FF] text-[#004346] text-xs font-bold px-3 py-1 uppercase tracking-widest font-['Space_Grotesk'] rounded-b-md">Popular</div>
+               <h3 className="text-xl uppercase tracking-widest text-[#00F5FF] mb-2 font-['Space_Grotesk']">Pro</h3>
+               <div className="text-4xl font-bold text-[#eeedf7] mb-8 font-['Space_Grotesk']">9<span className="text-sm text-[#abaab4]">/mo</span></div>
+               <button className="w-full py-4 rounded-full bg-gradient-to-br from-[#00F5FF] to-[#00e5ee] text-[#004346] uppercase font-bold text-sm tracking-widest mb-8 hover:shadow-[0_0_20px_rgba(0,245,255,0.4)] transition-all">Go Pro</button>
+               <ul className="space-y-4 text-sm text-[#eeedf7]">
+                 <li className="text-[#00F5FF]">Unlimited Synthesis</li>
+                 <li>Instant Voice Cloning</li>
+                 <li>Commercial License</li>
+               </ul>
+             </div>
+
+             <div className="bg-[#12131b] border border-[#474750]/30 p-8 rounded-3xl">
+               <h3 className="text-xl uppercase tracking-widest text-[#abaab4] mb-2 font-['Space_Grotesk']">Studio</h3>
+               <div className="text-4xl font-bold text-[#eeedf7] mb-8 font-['Space_Grotesk']">9<span className="text-sm text-[#abaab4]">/mo</span></div>
+               <button className="w-full py-3 rounded-full border border-[#abaab4] text-[#abaab4] uppercase font-bold text-sm tracking-widest mb-8 hover:bg-[#abaab4] hover:text-black transition-colors">Select</button>
+               <ul className="space-y-4 text-sm text-[#abaab4]">
+                 <li>API Access</li>
+                 <li>Custom AI Models</li>
+                 <li>24/7 Support</li>
+               </ul>
+             </div>
           </div>
         </div>
       </section>
 
-      {/* Massive CTA */}
-      <section className="py-32 bg-[#FF003C] text-center px-6">
-        <h2 className="text-5xl md:text-7xl font-space-grotesk font-bold text-[#050505] uppercase tracking-tighter mb-8 leading-none">
-          EXECUTE NOW.
-        </h2>
-        <button className="px-12 py-5 bg-[#050505] text-[#FF003C] font-space-grotesk font-bold text-xl uppercase tracking-widest hover:bg-white hover:text-[#050505] transition-colors shadow-[0_0_20px_rgba(0,0,0,0.5)]">
-          INITIALIZE SEQUENCE
-        </button>
-      </section>
-      
       {/* Footer */}
-      <footer className="py-12 border-t border-[#3b4b37]/30 text-center font-mono text-xs text-[#84967e] bg-[#0e0e0e]">
-        <p>END OF FILE. ai-voice-studio © 2024 | SECURE_PROTOCOL_V1.0.4</p>
+      <footer className="py-10 border-t border-[#474750]/30 text-center bg-[#0d0e15] text-[#abaab4] text-xs uppercase tracking-widest font-['Space_Grotesk']">
+        <p>SONIC_SINGULARITY © 2024 | ALL RIGHTS RESERVED</p>
       </footer>
     </main>
   );
